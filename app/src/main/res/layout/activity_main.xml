@@ -8,28 +8,40 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.camera.view.PreviewView
-        android:id="@+id/previewView"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="16dp" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Teks akan muncul di sini"
-        android:textSize="16sp"
-        android:background="#EEEEEE" />
+        <!-- Fragment Container -->
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <!-- Custom Menu -->
+        <LinearLayout
+            android:id="@+id/menuContainer"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnStart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mulai Kamera  OCR"
-        android:layout_margin="16dp" />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btnShortText"
+                android:text="Short Text"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/btnDocument"
+                android:text="Document"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
 
 
 </LinearLayout>
